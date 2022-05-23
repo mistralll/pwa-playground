@@ -3,7 +3,7 @@
   "background_color": "#f69435",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/index.html",
   "name": "my first pwa",
   "short_name": "my pwa",
   "icons": [

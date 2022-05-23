@@ -1,12 +1,19 @@
 // service-worker.js
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Install');
-  });
+});
   
-  self.addEventListener('activate', function(e) {
-    console.log('[ServiceWorker] Activate');
-  });
+self.addEventListener('activate', function(e) {
+  console.log('[ServiceWorker] Activate');
+});
   
-  // 現状では、この処理を書かないとService Workerが有効と判定されないようです
-  self.addEventListener('fetch', function(event) {});
-  
+// リソースフェッチ時のキャッシュロード処理
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+      caches
+          .match(event.request)
+          .then(function(response) {
+              return response || fetch(event.request);
+          })
+  );
+});
