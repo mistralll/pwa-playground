@@ -2,4 +2,4 @@
 ただの遊び場
 
 # Page URL
-https://mistralll.github.io/playground/
+https://mistralll.github.io/pwa-playground/
