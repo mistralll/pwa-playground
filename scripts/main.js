@@ -1,7 +1,8 @@
 function myfunc() {
     var a = inA.value;
     var b = inB.value;
-    msg.innerText = a+b;
+    var ans = a + b;
+    msg.innerText = '計算結果: ' + ans;
 }
 
 let inA = document.getElementById('inputA');
