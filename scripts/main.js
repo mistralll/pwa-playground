@@ -1,9 +1,11 @@
 function myfunc() {
-    msg.innerText = '内容は' + txt.value + 'です。';
+    var a = inA.value;
+    var b = inB.value;
+    msg.innerText = a+b;
 }
 
-let txt = document.getElementById('t01');
-let msg = document.getElementById('msg');
-let btn = document.getElementById('b01');
+let inA = document.getElementById('inputA');
+let inB = document.getElementById('inputB');
+let calcBtn = document.getElementById('calcButton');
 
-btn.addEventListener('click', myfunc);
+calcBtn.addEventListener('click', calc);
